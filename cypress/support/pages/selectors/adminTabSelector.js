@@ -167,5 +167,53 @@ class AdminTab {
     return cy.get('#app button.oxd-button--label-danger');
   }
 
+  getAdminTabJobDropPayGrades() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent > ul > li:nth-child(2) > a');
+  }
+
+  getAdminTabJobDropPayGradesAddBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div.orangehrm-header-container > div > button');
+  }
+
+  getAdminTabJobDropPayGradesAddNameText() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-row > div > div > div > div:nth-child(2) > input');
+  }
+
+  getAdminTabJobDropPayGradesAddNameSaveBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space');
+  }
+
+  getAdminTabJobDropPayGradesAddNameAddCurrenciesBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div:nth-child(2) > div > div.orangehrm-header-container > div > button');
+  }
+
+  getAdminTabJobDropPayGradesAddNameAddCurrenciesDropDown() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div.orangehrm-card-container > form > div:nth-child(1) > div > div > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i');
+  }
+
+  getAdminTabJobDropPayGradesAddNameAddCurrenciesDropDownOption1() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div.orangehrm-card-container > form > div:nth-child(1) > div > div > div > div:nth-child(2) > div > div > div.oxd-select-text--after > i');
+  }
+
+  getAdminTabJobDropPayGradesAddNameAddCurrenciesMinimumSalaryText() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div.orangehrm-card-container > form > div:nth-child(2) > div > div:nth-child(1) > div > div:nth-child(2) > input');
+  }
+
+  getAdminTabJobDropPayGradesAddNameAddCurrenciesMaximumSalaryText() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div.orangehrm-card-container > form > div:nth-child(2) > div > div:nth-child(2) > div > div:nth-child(2) > input');
+  }
+
+  getAdminTabJobDropPayGradesAddNameAddCurrenciesSaveBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div.orangehrm-card-container > form > div.oxd-form-actions > button.oxd-button.oxd-button--medium.oxd-button--secondary.orangehrm-left-space');
+  }
+
+  getAdminTabJobDropPayGradesEditBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(2) > div > div:nth-child(4) > div > button:nth-child(2)');
+  }
+
+  getAdminTabJobDropPayGradesDeleteBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > div.orangehrm-container > div > div.oxd-table-body > div:nth-child(1) > div > div:nth-child(4) > div > button:nth-child(1)');
+  }
+
 }
 export default AdminTab;

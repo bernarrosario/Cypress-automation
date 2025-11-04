@@ -2,35 +2,54 @@ import { adminTabActions } from "../support/pages/actions/adminTabActions";
 
 
 describe('OrangeHR Automation', () => {
-  context('Creating a user', function () {
-    it('Creating User', () => {//before/all
+  context('Creating and Deleting user', function () {
+    beforeEach(() => {
       cy.login();
+    });
+
+    it('Creating User', () => {//before/all
       adminTabActions.createUser();
     });
 
     it('Deleting User', () => {
       //after/all
-      cy.login();
       adminTabActions.deleteUser();
     });
   });
 
-
   context('Create, Edit and Delete Job Title', function (){
-    it('Creating Job Title', ()  => {
+    beforeEach(() => {
       cy.login();
+    });
+
+    it('Creating Job Title', ()  => {
       adminTabActions.createRole();
     });
 
     it('Editing Job Title', ()  => {
-      cy.login();
       adminTabActions.editRole();
     });
 
     it('Deleting Job Title', ()  => {
-      cy.login();
       adminTabActions.deleteRole();
-   });
-   });
+    });
   });
-  
+
+  context('Create, Edit and Delete Pay Grades', function (){
+    beforeEach(() => {
+      cy.login();
+    });
+
+    it('Creating Pay Grade', ()  => {
+      adminTabActions.createPaygrade();
+    });
+
+    it('Editing Pay Grade', ()  => {
+      adminTabActions.editPaygrade();
+    });
+
+    it('Deleting Pay Grade', ()  => {
+      adminTabActions.deletePaygrade();
+    });
+  });
+});

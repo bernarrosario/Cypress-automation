@@ -67,6 +67,39 @@ class AdminTabActions {
     this.adminTab.getAdminTabJobDropJobTitleDeleteBtn().click();
     this.adminTab.getAdminTabJobDropJobTitleDeleteBtnYes().click();
   }
+
+  createPaygrade() {
+    this.mainSite.getMainSiteAdminBtn().click();
+    this.adminTab.getAdminTabJobDropDownBtn().click();
+    this.adminTab.getAdminTabJobDropPayGrades().click();
+    this.adminTab.getAdminTabJobDropPayGradesAddBtn().click();
+    this.adminTab.getAdminTabJobDropPayGradesAddNameText().click().type('A1Test Pay Grade');
+    this.adminTab.getAdminTabJobDropPayGradesAddNameSaveBtn().click();
+    // this.adminTab.getAdminTabJobDropPayGradesAddNameAddCurrenciesBtn().click();
+    // this.adminTab.getAdminTabJobDropPayGradesAddNameAddCurrenciesDropDown().click();
+    // this.adminTab.getAdminTabJobDropPayGradesAddNameAddCurrenciesDropDownOption1().click();
+    // this.adminTab.getAdminTabJobDropPayGradesAddNameAddCurrenciesMinimumSalaryText().click().type('1500');
+    // this.adminTab.getAdminTabJobDropPayGradesAddNameAddCurrenciesMaximumSalaryText().click().type('3000');
+    // this.adminTab.getAdminTabJobDropPayGradesAddNameAddCurrenciesSaveBtn().click();
+
+  }
+
+  editPaygrade() {
+    this.mainSite.getMainSiteAdminBtn().click();
+    this.adminTab.getAdminTabJobDropDownBtn().click();
+    this.adminTab.getAdminTabJobDropPayGrades().click();
+    this.adminTab.getAdminTabJobDropPayGradesEditBtn().click();
+    this.adminTab.getAdminTabJobDropPayGradesAddNameText().click().clear().type('A1Test Pay Grade Edited');
+    this.adminTab.getAdminTabJobDropPayGradesAddNameSaveBtn().click();
+  }
+
+  deletePaygrade() {
+    this.mainSite.getMainSiteAdminBtn().click();
+    this.adminTab.getAdminTabJobDropDownBtn().click();
+    this.adminTab.getAdminTabJobDropPayGrades().click();
+    this.adminTab.getAdminTabJobDropPayGradesDeleteBtn().click();
+    this.adminTab.getAdminTabJobDropJobTitleDeleteBtnYes().click();
+  }
 }
 
 export default AdminTabActions;
