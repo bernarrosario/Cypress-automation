@@ -1,25 +1,17 @@
-import MainSite from "../support/pages/selectors/mainSite";
-import LeaveTab from "../support/pages/selectors/leaveTab";
+import MainSite from "../support/pages/selectors/mainSiteSelector";
+import LeaveTab from "../support/pages/selectors/leaveTabSelector";
+import { leaveTabActions } from "../support/pages/actions/leaveTabActions";
 
-
-describe('Cypress test automation', () => {
+describe('OrangeHR Leave Tab', () => {
   const mainSite = new MainSite();
   const leaveTab = new LeaveTab();
 
-  context('OrangTest Main Site Happy path', function () {
-    it('Visits BaseURL, Run Login Flow', () => {
+  context('Assigning Leave', function () {
+    beforeEach(() =>{
       cy.login();
     });
-  });
-
-  context('Leave Tab Scenarios', function () {
-    beforeEach(() => {
-      cy.login();
-      mainSite.getMainSiteLeaveBtn().click();
-    });
-
-    it('Visits Leave tab on Main Site', () => {
-      leaveTab.getLeaveTabApplyBtn().should('be.visible');
+    it('Assigning Leave', () => {
+      leaveTabActions.assignLeave();
     });
   });
 });

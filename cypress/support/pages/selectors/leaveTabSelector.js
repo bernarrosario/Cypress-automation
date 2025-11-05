@@ -27,6 +27,14 @@ class LeaveTab {
   getLeaveTabHelpBtn() {
     return cy.get('.oxd-topbar-body-nav-slot > .oxd-icon-button > .oxd-icon');
   }
+
+  getLeaveTabAssigneLeaveBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab > ul > div:nth-child(2) > li > a');
+  }
+
+  getLeaveTabAssigneLeaveEmployeeNameSearshBox() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div > div > div:nth-child(2) > div > div > input');
+  }
 }
 
 export default LeaveTab;
