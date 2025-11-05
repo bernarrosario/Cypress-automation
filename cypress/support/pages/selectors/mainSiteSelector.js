@@ -7,7 +7,7 @@ class MainSite {
     return cy.get(':nth-child(1) > .oxd-main-menu-item');
   }
 
-  getMainSitePersonalInfoBtn() {
+  getMainSitePimBtn() {
     return cy.get(':nth-child(2) > .oxd-main-menu-item');
   }
   
