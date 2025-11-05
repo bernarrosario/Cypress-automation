@@ -1,12 +1,12 @@
 import { pimTabActions } from "../support/pages/actions/pimTabActions"; //need clarification on exports
 
-describe('OrangeHR Automation', () => {
+describe('OrangeHR Automations PIM Tab', () => {
 
-  context('PIM Tab', function () {
+  context('PIM Tab Actions', function () {
     beforeEach(() => {
       cy.login();
     });
-    it('Create Employee', () => {
+    it('Creating Employee', () => {
       pimTabActions.createEmployee();
     });
   });
