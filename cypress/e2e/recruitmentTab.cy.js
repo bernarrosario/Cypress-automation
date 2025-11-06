@@ -1,25 +1,17 @@
-import MainSite from "../support/pages/selectors/mainSite";
-import PimTab from "../support/pages/selectors/pimTab";
+import RecruitmentTabActions, { recruitmentTabActions } from "../support/pages/actions/recruitmentTabActions";
+import MainSite from "../support/pages/selectors/mainSiteSelector";
+import PimTab from "../support/pages/selectors/pimTabSelector";
 
-
-describe('Cypress test automation', () => {
+describe('OrangeHR automation', () => {
   const mainSite = new MainSite();
   const pimTab = new PimTab();
 
-  context('OrangTest Main Site Happy path', function () {
-    it('Visits BaseURL, Run Login Flow', () => {
+  context('Recruitmet Tab Tests', function () {
+      beforeEach(() => {
       cy.login();
-    });
-  });
-
-  context('PIM Tab Scenarios', function () {
-    beforeEach(() => {
-      cy.login();
-      mainSite.getMainSitePersonalInfoBtn().click();
-    });
-
-    it('Visits PIM tab on Main Site', () => {
-      pimTab.getPimTabEmployeeListBtn().should('be.visible');
+      });
+    it('Creating a Candidate', () => {
+      recruitmentTabActions.creatingCandidate();
     });
   });
 });

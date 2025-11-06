@@ -1,23 +1,23 @@
 class PimTab {
 //update with correct tab locators
-  getPimTabConfigBtn() {
-    return cy.get('.--parent > .oxd-topbar-body-nav-tab-item');
+  getRecruitmentTabCandidatesBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.oxd-topbar-body-nav-tab.--visited');
   }
 
-  getPimTabEmployeeListBtn() {
-    return cy.get(':nth-child(2) > .oxd-topbar-body-nav-tab-item');
-  }
-  
-  getPimTabAddEmployeeBtn() {
-    return cy.get(':nth-child(3) > .oxd-topbar-body-nav-tab-item');
+  getRecruitmentTabAddCandidateBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div.orangehrm-header-container > button');
   }
 
-  getPimTabReportsBtn() {
-    return cy.get(':nth-child(4) > .oxd-topbar-body-nav-tab-item');
+  getRecruitmentTabAddCandidateFirstNameTextBox() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(1) > div:nth-child(2) > input');
   }
 
-  getPimTabHelpBtn() {
-    return cy.get('.oxd-topbar-body-nav-slot > .oxd-icon-button > .oxd-icon');
+  getRecruitmentTabAddCandidateMiddleNameTextBox() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(2) > div:nth-child(2) > input');
+  }
+
+  getRecruitmentTabAddCandidateLastNameTextBox() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div > form > div:nth-child(1) > div > div > div > div.--name-grouped-field > div:nth-child(3) > div:nth-child(2) > input');
   }
 }
 
