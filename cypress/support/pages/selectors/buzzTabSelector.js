@@ -1,24 +1,12 @@
-class PimTab {
-//update with correct tab locators
-  getPimTabConfigBtn() {
-    return cy.get('.--parent > .oxd-topbar-body-nav-tab-item');
+class BuzzTab {
+  //locators are not working in this tab
+  getBuzzTabPostTextBox() {
+    return cy.get('#Buzz\ Newsfeed > div > div.oxd-sheet.oxd-sheet--rounded.oxd-sheet--gutters.oxd-sheet--white.orangehrm-buzz-create-post > div.orangehrm-buzz-create-post-header > div.orangehrm-buzz-create-post-header-text > form > div > textarea');
   }
 
-  getPimTabEmployeeListBtn() {
-    return cy.get(':nth-child(2) > .oxd-topbar-body-nav-tab-item');
-  }
-  
-  getPimTabAddEmployeeBtn() {
-    return cy.get(':nth-child(3) > .oxd-topbar-body-nav-tab-item');
-  }
-
-  getPimTabReportsBtn() {
-    return cy.get(':nth-child(4) > .oxd-topbar-body-nav-tab-item');
-  }
-
-  getPimTabHelpBtn() {
-    return cy.get('.oxd-topbar-body-nav-slot > .oxd-icon-button > .oxd-icon');
+  getBuzzTabPostBtn() {
+    return cy.get('#Buzz\ Newsfeed > div > div.oxd-sheet.oxd-sheet--rounded.oxd-sheet--gutters.oxd-sheet--white.orangehrm-buzz-create-post > div.orangehrm-buzz-create-post-header > div.orangehrm-buzz-create-post-header-text > form > div > div > button');
   }
 }
 
-export default PimTab;
+export default BuzzTab;
