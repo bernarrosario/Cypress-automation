@@ -1,24 +1,8 @@
-class PimTab {
-//update with correct tab locators
-  getPimTabConfigBtn() {
-    return cy.get('.--parent > .oxd-topbar-body-nav-tab-item');
-  }
-
-  getPimTabEmployeeListBtn() {
-    return cy.get(':nth-child(2) > .oxd-topbar-body-nav-tab-item');
-  }
-  
-  getPimTabAddEmployeeBtn() {
-    return cy.get(':nth-child(3) > .oxd-topbar-body-nav-tab-item');
-  }
-
-  getPimTabReportsBtn() {
-    return cy.get(':nth-child(4) > .oxd-topbar-body-nav-tab-item');
-  }
-
-  getPimTabHelpBtn() {
-    return cy.get('.oxd-topbar-body-nav-slot > .oxd-icon-button > .oxd-icon');
+class DashboardTab {
+  //update with correct tab locators
+  getDashboardTabClockInBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div:nth-child(1) > div > div.orangehrm-dashboard-widget-body > div.orangehrm-attendance-card > div.orangehrm-attendance-card-bar > button');
   }
 }
 
-export default PimTab;
+export default DashboardTab;
