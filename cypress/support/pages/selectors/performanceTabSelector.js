@@ -1,24 +1,16 @@
-class PimTab {
+class PerformanceTab {
 //update with correct tab locators
-  getPimTabConfigBtn() {
-    return cy.get('.--parent > .oxd-topbar-body-nav-tab-item');
+  getPerformanceTabConfigureDropDownBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.oxd-topbar-body-nav-tab.--parent.--visited');
   }
 
-  getPimTabEmployeeListBtn() {
-    return cy.get(':nth-child(2) > .oxd-topbar-body-nav-tab-item');
-  }
-  
-  getPimTabAddEmployeeBtn() {
-    return cy.get(':nth-child(3) > .oxd-topbar-body-nav-tab-item');
+  getPerformanceTabConfigureDropDownKpisBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent.--visited > ul > li:nth-child(1)');
   }
 
-  getPimTabReportsBtn() {
-    return cy.get(':nth-child(4) > .oxd-topbar-body-nav-tab-item');
-  }
-
-  getPimTabHelpBtn() {
-    return cy.get('.oxd-topbar-body-nav-slot > .oxd-icon-button > .oxd-icon');
+  getPerformanceTabConfigureDropDownKpisAddBtn() {
+    return cy.get('#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-navigation > header > div.oxd-topbar-body > nav > ul > li.--active.oxd-topbar-body-nav-tab.--parent.--visited > ul > li:nth-child(1)');
   }
 }
 
-export default PimTab;
+export default PerformanceTab;
