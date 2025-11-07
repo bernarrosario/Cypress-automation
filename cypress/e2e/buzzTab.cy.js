@@ -6,6 +6,9 @@
 //     beforeEach(() => {
 //       cy.login();
 //     });
+//     after(() => {
+//       cy.logout();
+//     });
 
 //     it('Posts a Buzz update', () => {
 //       buzzTabActions.postBuzzUpdate();

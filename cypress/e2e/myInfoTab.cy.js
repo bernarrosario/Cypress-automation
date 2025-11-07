@@ -5,6 +5,9 @@ describe('OrangeHR automation', () => {
     beforeEach(() => {
       cy.login();
     });
+    after(() => {
+      cy.logout();
+    });
     it('Editing Employee Name', () => {
       myInfoTabActions.editEmployeeInfo();
     });

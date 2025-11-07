@@ -5,6 +5,9 @@ describe('OrangeHR automation', () => {
     beforeEach(() => {
       cy.login();
     });
+    after(() => {
+      cy.logout();
+    });
     it('Opens Dashboard config', () => {
       dashboardTabActions.openDashboardConfig();
     });

@@ -5,6 +5,9 @@ describe('OrangeHR automation', () => {
     beforeEach(() => {
       cy.login();
     });
+    after(() => {
+      cy.logout();
+    });
     it('Opens assign claim', () => {
       claimTabActions.openAssignClaim();
     });

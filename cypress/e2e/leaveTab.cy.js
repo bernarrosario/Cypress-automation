@@ -10,6 +10,9 @@ describe('OrangeHR Leave Tab', () => {
     beforeEach(() =>{
       cy.login();
     });
+    after(() => {
+      cy.logout();
+    });
     it('Assigning Leave', () => {
       leaveTabActions.assignLeave();
     });

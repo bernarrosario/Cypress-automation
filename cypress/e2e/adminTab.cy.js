@@ -1,10 +1,13 @@
 import { adminTabActions } from "../support/pages/actions/adminTabActions";
-
+//build redundancy to avoid test failures due to data been duplicated
 
 describe('OrangeHR Automation', () => {
   context('Creating and Deleting user', function () {
     beforeEach(() => {
       cy.login();
+    });
+    after(() => {
+      cy.logout();
     });
 
     it('Creating User', () => {//before/all
@@ -20,6 +23,9 @@ describe('OrangeHR Automation', () => {
   context('Create, Edit and Delete Job Title', function (){
     beforeEach(() => {
       cy.login();
+    });
+    after(() => {
+      cy.logout();
     });
 
     it('Creating Job Title', ()  => {
@@ -38,6 +44,9 @@ describe('OrangeHR Automation', () => {
   context('Create, Edit and Delete Pay Grades', function (){
     beforeEach(() => {
       cy.login();
+    });
+    after(() => {
+      cy.logout();
     });
 
     it('Creating Pay Grade', ()  => {
